@@ -5,14 +5,14 @@ import { motion } from "framer-motion";
 const testimonials = [
   {
     quote:
-      "Within the first 45 days we had 14 qualified meetings on the calendar. Prestige Consulting completely transformed our outbound. I stopped worrying about top-of-funnel entirely.",
+      "Within the first 45 days we had 14 qualified meetings on the calendar. Vellmont Consulting completely transformed our outbound. I stopped worrying about top-of-funnel entirely.",
     name: "Marcus T.",
     title: "VP of Sales, B2B SaaS",
     initials: "MT",
   },
   {
     quote:
-      "We tried building an in-house SDR team for two years and burned through budget. Prestige had us booking meetings in under a month at a fraction of the cost.",
+      "We tried building an in-house SDR team for two years and burned through budget. Vellmont had us booking meetings in under a month at a fraction of the cost.",
     name: "Sarah K.",
     title: "Founder, Staffing Agency",
     initials: "SK",
@@ -26,7 +26,7 @@ const testimonials = [
   },
   {
     quote:
-      "Our close rate jumped because we were no longer wasting time on unqualified prospects. Prestige Consulting filters everything before it hits our calendar.",
+      "Our close rate jumped because we were no longer wasting time on unqualified prospects. Vellmont Consulting filters everything before it hits our calendar.",
     name: "Jennifer L.",
     title: "Director of Business Development",
     initials: "JL",
@@ -40,7 +40,7 @@ const testimonials = [
   },
   {
     quote:
-      "The team at Prestige Consulting acts like an extension of our own sales org. The copy, the targeting, the follow-up — all dialed in from day one.",
+      "The team at Vellmont Consulting acts like an extension of our own sales org. The copy, the targeting, the follow-up — all dialed in from day one.",
     name: "Rachel W.",
     title: "Head of Growth, MarTech Company",
     initials: "RW",

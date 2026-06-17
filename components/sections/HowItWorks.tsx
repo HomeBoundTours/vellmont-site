@@ -79,7 +79,7 @@ export default function HowItWorks() {
               <div className="pc-step-num">
                 <span className="pc-step-num-circle">{step.num}</span>
               </div>
-              <h3 style={{ fontSize: 17, fontWeight: 700, color: "#1E2A44", marginBottom: 10, lineHeight: 1.25 }}>
+              <h3 style={{ fontSize: 17, fontWeight: 700, color: "#18202B", marginBottom: 10, lineHeight: 1.25 }}>
                 {step.title}
               </h3>
               <p style={{ fontSize: 14, color: "#6B7488", lineHeight: 1.75, margin: 0 }}>

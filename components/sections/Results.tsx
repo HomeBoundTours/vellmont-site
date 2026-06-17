@@ -105,7 +105,7 @@ export default function Results() {
               viewport={{ once: true }}
               transition={{ duration: 0.65, ease: EASE, delay: i * 0.08 }}
             >
-              <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(228,199,107,0.80)", marginBottom: 8 }}>
+              <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(95,178,147,0.80)", marginBottom: 8 }}>
                 {cs.industry}
               </div>
               <div className="pc-result-metric">{cs.metric}</div>
@@ -122,8 +122,8 @@ export default function Results() {
                     key={tag}
                     style={{
                       fontSize: 11, fontWeight: 700, padding: "3px 10px",
-                      borderRadius: 999, background: "rgba(201,162,39,0.12)",
-                      border: "1px solid rgba(228,199,107,0.25)", color: "#E4C76B",
+                      borderRadius: 999, background: "rgba(30,107,82,0.12)",
+                      border: "1px solid rgba(95,178,147,0.25)", color: "#5FB293",
                       letterSpacing: "0.04em",
                     }}
                   >

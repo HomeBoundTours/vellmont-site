@@ -31,22 +31,22 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p variants={item} className="pc-hero-sub">
-          Prestige Consulting is a B2B consulting firm. We run your outbound engine to book
+          Vellmont Consulting is a B2B consulting firm. We run your outbound engine to book
           qualified meetings — then help you document SOPs and tighten operations, so your
           business grows and runs smoothly behind the scenes.
         </motion.p>
 
         <motion.div variants={item} className="pc-cta-row">
-          <motion.a
-            href="/services"
-            className="pc-btn-primary"
-            aria-label="Explore our consulting services"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.97 }}
-            style={{ textDecoration: "none" }}
-          >
-            Explore Our Services →
-          </motion.a>
+          <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }}>
+            <Link
+              href="/connect"
+              className="pc-btn-primary"
+              aria-label="Connect with us now"
+              style={{ textDecoration: "none" }}
+            >
+              Connect With Us Now →
+            </Link>
+          </motion.div>
           <motion.div
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.97 }}

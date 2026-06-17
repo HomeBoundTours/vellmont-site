@@ -58,7 +58,7 @@ export default function WhyPrestige() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: EASE }}
         >
-          Why Prestige Consulting
+          Why Vellmont Consulting
         </motion.p>
         <motion.h2
           className="pc-section-h2"
@@ -99,14 +99,14 @@ export default function WhyPrestige() {
               transition={{ duration: 0.6, ease: EASE, delay: i * 0.08 }}
               style={{
                 background: "#FFFFFF",
-                border: "1px solid #E7E1D4",
+                border: "1px solid #DDE3EA",
                 borderRadius: 16,
                 padding: "26px 22px",
-                boxShadow: "0 1px 3px rgba(31,56,100,0.05), 0 4px 16px rgba(31,56,100,0.06)",
+                boxShadow: "0 1px 3px rgba(21,38,63,0.05), 0 4px 16px rgba(21,38,63,0.06)",
               }}
             >
               <div style={{ fontSize: 26, marginBottom: 14 }}>{d.icon}</div>
-              <h3 style={{ fontSize: 17, fontWeight: 700, color: "#1E2A44", marginBottom: 8, letterSpacing: "-0.01em" }}>
+              <h3 style={{ fontSize: 17, fontWeight: 700, color: "#18202B", marginBottom: 8, letterSpacing: "-0.01em" }}>
                 {d.title}
               </h3>
               <p style={{ fontSize: 14, color: "#6B7488", lineHeight: 1.75, margin: 0 }}>
@@ -125,19 +125,19 @@ export default function WhyPrestige() {
           style={{
             overflowX: "auto",
             borderRadius: 16,
-            border: "1px solid #E7E1D4",
+            border: "1px solid #DDE3EA",
             background: "#FFFFFF",
-            boxShadow: "0 1px 3px rgba(31,56,100,0.05), 0 4px 16px rgba(31,56,100,0.06)",
+            boxShadow: "0 1px 3px rgba(21,38,63,0.05), 0 4px 16px rgba(21,38,63,0.06)",
           }}
         >
           <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 600 }}>
             <thead>
-              <tr style={{ borderBottom: "1px solid #E7E1D4" }}>
+              <tr style={{ borderBottom: "1px solid #DDE3EA" }}>
                 <th style={{ padding: "16px 20px", textAlign: "left", fontSize: 11, fontWeight: 700, color: "#6B7488", letterSpacing: "0.10em", textTransform: "uppercase" }}>
                   Feature
                 </th>
-                <th style={{ padding: "16px 20px", textAlign: "left", fontSize: 11, fontWeight: 800, color: "#9A7A12", letterSpacing: "0.10em", textTransform: "uppercase", background: "rgba(201,162,39,0.07)" }}>
-                  Prestige Consulting
+                <th style={{ padding: "16px 20px", textAlign: "left", fontSize: 11, fontWeight: 800, color: "#18553F", letterSpacing: "0.10em", textTransform: "uppercase", background: "rgba(30,107,82,0.07)" }}>
+                  Vellmont Consulting
                 </th>
                 <th style={{ padding: "16px 20px", textAlign: "left", fontSize: 11, fontWeight: 700, color: "#6B7488", letterSpacing: "0.10em", textTransform: "uppercase" }}>
                   In-House SDR
@@ -151,12 +151,12 @@ export default function WhyPrestige() {
               {comparison.map((row, i) => (
                 <tr
                   key={row.feature}
-                  style={{ borderBottom: i < comparison.length - 1 ? "1px solid #E7E1D4" : "none" }}
+                  style={{ borderBottom: i < comparison.length - 1 ? "1px solid #DDE3EA" : "none" }}
                 >
-                  <td style={{ padding: "14px 20px", fontSize: 14, fontWeight: 600, color: "#1E2A44" }}>
+                  <td style={{ padding: "14px 20px", fontSize: 14, fontWeight: 600, color: "#18202B" }}>
                     {row.feature}
                   </td>
-                  <td style={{ padding: "14px 20px", fontSize: 14, fontWeight: 700, color: "#9A7A12", background: "rgba(201,162,39,0.04)" }}>
+                  <td style={{ padding: "14px 20px", fontSize: 14, fontWeight: 700, color: "#18553F", background: "rgba(30,107,82,0.04)" }}>
                     {row.prestige}
                   </td>
                   <td style={{ padding: "14px 20px", fontSize: 14, color: "#6B7488" }}>

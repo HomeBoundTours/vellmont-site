@@ -22,10 +22,10 @@ export default function ConsultingHeader() {
         <Link
           href="/"
           className="pc-nav-logo"
-          aria-label="Prestige Consulting LLC home"
+          aria-label="Vellmont Consulting LLC home"
         >
           <span className="pc-nav-logo-dot" aria-hidden="true" />
-          Prestige Consulting
+          Vellmont Consulting
         </Link>
 
         <nav className="pc-nav-links" aria-label="Primary navigation">
@@ -41,13 +41,13 @@ export default function ConsultingHeader() {
         </nav>
 
         <div className="pc-nav-cta">
-          <a
-            href="/#book-call"
+          <Link
+            href="/connect"
             className="pc-btn-primary hidden md:inline-flex"
             style={{ padding: "10px 20px", fontSize: 13.5, borderRadius: 10, textDecoration: "none" }}
           >
-            Book a Discovery Call
-          </a>
+            Connect With Us Now
+          </Link>
 
           <button
             className="pc-nav-toggle"
@@ -86,15 +86,15 @@ export default function ConsultingHeader() {
                 {link.label}
               </Link>
             ))}
-            <div className="mt-3 pt-3" style={{ borderTop: "1px solid rgba(228,199,107,0.18)" }}>
-              <a
-                href="/#book-call"
+            <div className="mt-3 pt-3" style={{ borderTop: "1px solid rgba(95,178,147,0.18)" }}>
+              <Link
+                href="/connect"
                 onClick={() => setOpen(false)}
                 className="pc-btn-primary"
                 style={{ borderRadius: 10, justifyContent: "center", display: "flex", textDecoration: "none" }}
               >
-                Book a Discovery Call
-              </a>
+                Connect With Us Now
+              </Link>
             </div>
           </motion.nav>
         )}

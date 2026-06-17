@@ -109,7 +109,7 @@ export default function Services() {
           viewport={{ once: true }}
           transition={{ duration: 0.65, ease: EASE, delay: 0.15 }}
         >
-          Prestige Consulting is more than outreach. We fill your calendar with qualified meetings —
+          Vellmont Consulting is more than outreach. We fill your calendar with qualified meetings —
           and help you document SOPs and tighten operations so the business runs smoothly behind the scenes.
         </motion.p>
 
@@ -124,7 +124,7 @@ export default function Services() {
               transition={{ duration: 0.65, ease: EASE, delay: i * 0.10 }}
             >
               <div className="pc-service-icon">{service.icon}</div>
-              <h3 style={{ fontSize: 19, fontWeight: 700, color: "#1E2A44", marginBottom: 10, letterSpacing: "-0.01em" }}>
+              <h3 style={{ fontSize: 19, fontWeight: 700, color: "#18202B", marginBottom: 10, letterSpacing: "-0.01em" }}>
                 {service.title}
               </h3>
               <p style={{ fontSize: 14.5, color: "#6B7488", lineHeight: 1.75, marginBottom: 20 }}>
@@ -133,7 +133,7 @@ export default function Services() {
               <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: 8 }}>
                 {service.bullets.map((b) => (
                   <li key={b} style={{ display: "flex", alignItems: "flex-start", gap: 10, fontSize: 13.5, color: "#6B7488" }}>
-                    <span style={{ color: "#9A7A12", fontWeight: 900, flexShrink: 0, marginTop: 1 }}>✓</span>
+                    <span style={{ color: "#18553F", fontWeight: 900, flexShrink: 0, marginTop: 1 }}>✓</span>
                     {b}
                   </li>
                 ))}

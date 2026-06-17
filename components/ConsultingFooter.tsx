@@ -13,7 +13,7 @@ export default function ConsultingFooter() {
           <div>
             <div className="pc-footer-logo">
               <span className="pc-footer-logo-dot" aria-hidden="true" />
-              Prestige Consulting LLC
+              Vellmont Consulting LLC
             </div>
             <p className="pc-footer-tagline" style={{ maxWidth: 320 }}>
               B2B appointment setting done right. We build your outbound system, run your outreach,
@@ -36,21 +36,21 @@ export default function ConsultingFooter() {
             <Link className="pc-footer-link" href="/process">How It Works</Link>
             <Link className="pc-footer-link" href="/services">Results</Link>
             <Link className="pc-footer-link" href="/faq">FAQ</Link>
-            <a className="pc-footer-link" href="/#book-call">Book a Call</a>
+            <Link className="pc-footer-link" href="/connect">Connect With Us</Link>
           </div>
         </div>
 
         <hr className="pc-footer-divider" />
 
         <div className="pc-footer-bottom">
-          <span>© {year} Prestige Consulting LLC. All rights reserved.</span>
+          <span>© {year} Vellmont Consulting LLC. All rights reserved.</span>
           <a
             href="https://homeboundtours.github.io/sterling-crest-landing-page"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: "inherit", textDecoration: "none", borderBottom: "1px solid rgba(228,199,107,0.35)", paddingBottom: 1, transition: "border-color 0.2s" }}
-            onMouseEnter={(e) => (e.currentTarget.style.borderBottomColor = "rgba(228,199,107,0.75)")}
-            onMouseLeave={(e) => (e.currentTarget.style.borderBottomColor = "rgba(228,199,107,0.35)")}
+            style={{ color: "inherit", textDecoration: "none", borderBottom: "1px solid rgba(95,178,147,0.35)", paddingBottom: 1, transition: "border-color 0.2s" }}
+            onMouseEnter={(e) => (e.currentTarget.style.borderBottomColor = "rgba(95,178,147,0.75)")}
+            onMouseLeave={(e) => (e.currentTarget.style.borderBottomColor = "rgba(95,178,147,0.35)")}
           >
             Sterling Crest Holdings LLC — A Privately Held Family of Premium Brands
           </a>

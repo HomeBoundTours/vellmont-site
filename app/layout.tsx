@@ -19,11 +19,11 @@ const fraunces = Fraunces({
   display: "swap",
 });
 
-const SITE_URL = "https://prestigeconsultingllc.com";
-const SITE_NAME = "Prestige Consulting LLC";
-const DEFAULT_TITLE = "Prestige Consulting LLC — B2B Growth & Operations Consulting";
+const SITE_URL = "https://vellmontconsulting.com";
+const SITE_NAME = "Vellmont Consulting LLC";
+const DEFAULT_TITLE = "Vellmont Consulting LLC — B2B Growth & Operations Consulting";
 const DEFAULT_DESCRIPTION =
-  "Prestige Consulting is a B2B consulting firm. We book qualified sales meetings via cold email, LinkedIn, and multi-channel outreach — and help you document SOPs and streamline operations so your business runs smoothly behind the scenes.";
+  "Vellmont Consulting is a B2B consulting firm. We book qualified sales meetings via cold email, LinkedIn, and multi-channel outreach — and help you document SOPs and streamline operations so your business runs smoothly behind the scenes.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -47,11 +47,11 @@ export const metadata: Metadata = {
     "SOP documentation",
     "operations consulting",
     "business process consulting",
-    "Prestige Consulting",
+    "Vellmont Consulting",
   ],
-  authors: [{ name: "Prestige Consulting LLC" }],
-  creator: "Prestige Consulting LLC",
-  publisher: "Prestige Consulting LLC",
+  authors: [{ name: "Vellmont Consulting LLC" }],
+  creator: "Vellmont Consulting LLC",
+  publisher: "Vellmont Consulting LLC",
   robots: {
     index: true,
     follow: true,
@@ -122,7 +122,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <a
             href="#main-content"
             className="absolute top-[-100px] left-4 z-[9999] inline-flex items-center gap-2 rounded-full text-sm font-semibold px-5 py-2.5 transition-[top] duration-200 focus:top-4"
-            style={{ background: "#C9A227", color: "#2A2410" }}
+            style={{ background: "#1E6B52", color: "#FFFFFF" }}
           >
             Skip to main content
           </a>
