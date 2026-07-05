@@ -1,11 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
+import CountUp from "@/components/CountUp";
+import SpotlightCard from "@/components/SpotlightCard";
 
-const caseStudies = [
+type Metric = { value: number; prefix?: string; suffix?: string; decimals?: number };
+
+const caseStudies: {
+  industry: string;
+  metric: Metric;
+  unit: string;
+  period: string;
+  detail: string;
+  tags: string[];
+}[] = [
   {
     industry: "B2B SaaS",
-    metric: "127",
+    metric: { value: 127 },
     unit: "meetings",
     period: "in 90 days",
     detail:
@@ -14,7 +25,7 @@ const caseStudies = [
   },
   {
     industry: "Staffing Agency",
-    metric: "4.2×",
+    metric: { value: 4.2, suffix: "×", decimals: 1 },
     unit: "pipeline",
     period: "in 60 days",
     detail:
@@ -23,39 +34,12 @@ const caseStudies = [
   },
   {
     industry: "Financial Services",
-    metric: "$1.1M",
+    metric: { value: 1.1, prefix: "$", suffix: "M", decimals: 1 },
     unit: "new ARR",
     period: "from 1 campaign",
     detail:
       "A wealth management RIA wanted to reach business owners with $5M+ AUM. Our direct outreach campaign generated 31 qualified meetings in 45 days — $1.1M in new assets under management within 6 months.",
     tags: ["Cold Email", "Direct Mail", "Multi-Channel"],
-  },
-  {
-    industry: "IT Managed Services",
-    metric: "9",
-    unit: "meetings",
-    period: "in month one",
-    detail:
-      "A regional MSP had never done outbound before. We built their ICP, wrote their sequences, and launched within 12 days. Month one: 9 qualified meetings with IT Directors and CTOs at 50–500 person companies.",
-    tags: ["Cold Email", "LinkedIn"],
-  },
-  {
-    industry: "Commercial Real Estate",
-    metric: "68%",
-    unit: "show rate",
-    period: "across all campaigns",
-    detail:
-      "A CRE advisory firm was frustrated by no-shows. We rebuilt their qualification process and pre-call sequence. Show rate jumped from 41% to 68% within 30 days — same number of meetings, dramatically higher output.",
-    tags: ["Qualification", "Follow-Up"],
-  },
-  {
-    industry: "HR Technology",
-    metric: "22",
-    unit: "demos booked",
-    period: "in 45 days",
-    detail:
-      "An HR tech startup targeting HR leaders at 200–1,000 person companies. We used a highly personalized LinkedIn + email sequence referencing specific pain points. 22 product demos booked in the first 45 days.",
-    tags: ["LinkedIn", "Cold Email", "Personalization"],
   },
 ];
 
@@ -97,9 +81,10 @@ export default function Results() {
 
         <div className="pc-results-grid">
           {caseStudies.map((cs, i) => (
-            <motion.div
+            <SpotlightCard
               key={cs.industry}
               className="pc-result-card"
+              glow="rgba(95,178,147,0.10)"
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -108,7 +93,15 @@ export default function Results() {
               <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(95,178,147,0.80)", marginBottom: 8 }}>
                 {cs.industry}
               </div>
-              <div className="pc-result-metric">{cs.metric}</div>
+              <div className="pc-result-metric">
+                <CountUp
+                  value={cs.metric.value}
+                  prefix={cs.metric.prefix}
+                  suffix={cs.metric.suffix}
+                  decimals={cs.metric.decimals}
+                  duration={1.4}
+                />
+              </div>
               <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
                 <span style={{ fontSize: 16, fontWeight: 700, color: "#f1f5f9" }}>{cs.unit}</span>
                 <span style={{ fontSize: 13, color: "rgba(241,245,249,0.45)" }}>{cs.period}</span>
@@ -131,7 +124,7 @@ export default function Results() {
                   </span>
                 ))}
               </div>
-            </motion.div>
+            </SpotlightCard>
           ))}
         </div>
       </div>

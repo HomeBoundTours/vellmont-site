@@ -12,9 +12,16 @@ export default function BookCall() {
         background: "radial-gradient(130% 110% at 20% 110%, #223A5C 0%, #15263F 45%, #0F1C30 100%)",
         borderTop: "1px solid rgba(95,178,147,0.14)",
         padding: "80px 0 100px",
+        position: "relative",
+        overflow: "hidden",
       }}
     >
-      <div className="pc-container">
+      <div className="pc-aurora" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+      </div>
+      <div className="pc-container" style={{ position: "relative", zIndex: 1 }}>
         <div
           style={{
             display: "grid",

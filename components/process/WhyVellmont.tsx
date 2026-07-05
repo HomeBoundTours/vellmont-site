@@ -1,38 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Icon, { type IconName } from "@/components/Icon";
 
-const differentiators: { icon: IconName; title: string; body: string }[] = [
+const principles = [
   {
-    icon: "zap",
-    title: "Live in under 2 weeks",
-    body: "Most agencies take 6–8 weeks to get started. We're running campaigns within 10–14 days of signing — because your pipeline can't wait.",
-  },
-  {
-    icon: "target",
-    title: "We only book qualified meetings",
+    title: "Only qualified meetings",
     body: "Every prospect is vetted before hitting your calendar. If someone doesn't meet your ICP criteria or show genuine interest, they don't become a meeting.",
   },
   {
-    icon: "message",
     title: "Human-written, human-managed",
     body: "No generic AI spam. Every sequence is written by experienced SDRs and managed by a real human who handles replies, objections, and qualification personally.",
   },
   {
-    icon: "chart",
-    title: "Full transparency & reporting",
-    body: "Weekly reports show you exactly what was sent, who replied, what was said, and what meetings were booked. No black box — you see everything.",
-  },
-  {
-    icon: "refresh",
-    title: "Continuous optimization",
-    body: "We A/B test subject lines, messaging angles, and CTAs every week. What's working gets scaled; what isn't gets cut. Your cost-per-meeting drops over time.",
-  },
-  {
-    icon: "handshake",
     title: "No long-term lock-in",
-    body: "We don't do 12-month contracts that trap you. Month-to-month options are available because we believe in earning your business with results, not paperwork.",
+    body: "We don't do 12-month contracts that trap you. Month-to-month options are available because we earn your business with results, not paperwork.",
   },
 ];
 
@@ -48,9 +29,9 @@ const comparison = [
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
-export default function WhyPrestige() {
+export default function WhyVellmont() {
   return (
-    <section className="pc-section-mid pc-section-pad">
+    <section className="pc-section-pad" style={{ background: "#FCFBF6", borderTop: "1px solid rgba(21,38,63,0.10)" }}>
       <div className="pc-container">
         <motion.p
           className="pc-eyebrow"
@@ -71,61 +52,26 @@ export default function WhyPrestige() {
           Built different.<br />
           <em className="pc-hero-accent">Results first.</em>
         </motion.h2>
-        <motion.p
-          className="pc-section-lead"
-          initial={{ opacity: 0, y: 16 }}
+
+        <motion.div
+          className="pc-principles"
+          style={{ margin: "48px 0 72px" }}
+          initial={{ opacity: 0, y: 22 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.65, ease: EASE, delay: 0.15 }}
+          transition={{ duration: 0.65, ease: EASE, delay: 0.12 }}
         >
-          We built this company because we were frustrated by agencies that overpromised and
-          underdelivered. Every decision we make — from how we write copy to how we report results —
-          is designed around one thing: meetings that actually close.
-        </motion.p>
-
-        {/* Differentiator grid */}
-        <div
-          style={{
-            display: "grid", gap: 16,
-            gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
-            marginBottom: 80,
-          }}
-        >
-          {differentiators.map((d, i) => (
-            <motion.div
-              key={d.title}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0.6, ease: EASE, delay: i * 0.08 },
-              }}
-              viewport={{ once: true }}
-              whileHover={{
-                y: -3,
-                boxShadow: "0 4px 6px rgba(21,38,63,0.06), 0 20px 40px rgba(21,38,63,0.12)",
-              }}
-              transition={{ duration: 0.25, ease: EASE }}
-              style={{
-                background: "#FFFFFF",
-                border: "1px solid #DDE3EA",
-                borderRadius: 16,
-                padding: "26px 22px",
-                boxShadow: "0 1px 3px rgba(21,38,63,0.05), 0 4px 16px rgba(21,38,63,0.06)",
-              }}
-            >
-              <div className="pc-feature-icon"><Icon name={d.icon} size={22} /></div>
-              <h3 style={{ fontSize: 17, fontWeight: 700, color: "#18202B", marginBottom: 8, letterSpacing: "-0.01em" }}>
-                {d.title}
-              </h3>
-              <p style={{ fontSize: 14, color: "#6B7488", lineHeight: 1.75, margin: 0 }}>
-                {d.body}
-              </p>
-            </motion.div>
+          {principles.map((p, i) => (
+            <div key={p.title} className="pc-principle">
+              <span className="pc-principle-num" aria-hidden="true">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <h3 className="pc-principle-title">{p.title}</h3>
+              <p className="pc-principle-body">{p.body}</p>
+            </div>
           ))}
-        </div>
+        </motion.div>
 
-        {/* Comparison table */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -134,7 +80,7 @@ export default function WhyPrestige() {
           style={{
             overflowX: "auto",
             borderRadius: 16,
-            border: "1px solid #DDE3EA",
+            border: "1px solid rgba(21,38,63,0.10)",
             background: "#FFFFFF",
             boxShadow: "0 1px 3px rgba(21,38,63,0.05), 0 4px 16px rgba(21,38,63,0.06)",
           }}

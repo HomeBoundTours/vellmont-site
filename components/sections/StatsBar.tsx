@@ -1,12 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
+import CountUp from "@/components/CountUp";
 
 const stats = [
-  { num: "85+", label: "B2B Clients Served", suffix: "" },
-  { num: "12", label: "Industries Covered", suffix: "+" },
-  { num: "1,200+", label: "Meetings Booked", suffix: "" },
-  { num: "72", label: "Avg. Show Rate", suffix: "%" },
+  { value: 85, separator: false, label: "B2B Clients Served", suffix: "+" },
+  { value: 12, separator: false, label: "Industries Covered", suffix: "+" },
+  { value: 1200, separator: true, label: "Meetings Booked", suffix: "+" },
+  { value: 72, separator: false, label: "Avg. Show Rate", suffix: "%" },
 ];
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -35,7 +36,8 @@ export default function StatsBar() {
           {stats.map((s) => (
             <div key={s.label} className="pc-stat-cell">
               <div className="pc-stat-num">
-                {s.num}<span>{s.suffix}</span>
+                <CountUp value={s.value} separator={s.separator} duration={1.8} />
+                <span>{s.suffix}</span>
               </div>
               <div style={{ fontSize: 13, color: "rgba(241,245,249,0.45)", fontWeight: 600, marginTop: 4 }}>
                 {s.label}

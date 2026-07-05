@@ -1,18 +1,16 @@
-import Hero from "@/components/sections/Hero";
+import EditorialHero from "@/components/home/EditorialHero";
 import MarqueeTicker from "@/components/sections/MarqueeTicker";
-import StatsBar from "@/components/sections/StatsBar";
-import Services from "@/components/sections/Services";
-import Testimonials from "@/components/sections/Testimonials";
+import ServiceIndex from "@/components/home/ServiceIndex";
+import QuoteShowcase from "@/components/home/QuoteShowcase";
 import BookCall from "@/components/sections/BookCall";
 
 export default function HomePage() {
   return (
     <>
-      <Hero />
+      <EditorialHero />
       <MarqueeTicker />
-      <Services />
-      <StatsBar />
-      <Testimonials limit={3} />
+      <ServiceIndex />
+      <QuoteShowcase />
       <BookCall />
     </>
   );

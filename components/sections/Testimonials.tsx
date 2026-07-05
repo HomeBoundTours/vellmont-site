@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import SpotlightCard from "@/components/SpotlightCard";
 
 const testimonials = [
   {
@@ -86,9 +87,10 @@ export default function Testimonials({ limit }: { limit?: number }) {
 
         <div className="pc-testimonial-grid">
           {visible.map((t, i) => (
-            <motion.div
+            <SpotlightCard
               key={t.name}
               className="pc-testimonial-card"
+              glow="rgba(194,163,107,0.12)"
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -103,7 +105,7 @@ export default function Testimonials({ limit }: { limit?: number }) {
                   <div className="pc-reviewer-title">{t.title}</div>
                 </div>
               </div>
-            </motion.div>
+            </SpotlightCard>
           ))}
         </div>
       </div>

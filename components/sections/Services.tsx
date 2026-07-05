@@ -1,10 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Icon, { type IconName } from "@/components/Icon";
+import SpotlightCard from "@/components/SpotlightCard";
 
-const services = [
+const services: {
+  icon: IconName;
+  title: string;
+  description: string;
+  bullets: string[];
+}[] = [
   {
-    icon: "📧",
+    icon: "mail",
     title: "Cold Email Outreach",
     description:
       "We build and manage your entire cold email infrastructure — domain setup, inbox warming, list building, sequence writing, and deliverability monitoring. You get replies from interested prospects, not spam folders.",
@@ -16,7 +23,7 @@ const services = [
     ],
   },
   {
-    icon: "💼",
+    icon: "linkedin",
     title: "LinkedIn Outreach",
     description:
       "We leverage LinkedIn Sales Navigator to identify and engage your exact buyers. Our team handles connection requests, personalized DMs, and follow-up sequences that actually get responses from decision-makers.",
@@ -28,7 +35,7 @@ const services = [
     ],
   },
   {
-    icon: "🔀",
+    icon: "shuffle",
     title: "Multi-Channel Campaigns",
     description:
       "The most effective outreach hits prospects on multiple fronts. We coordinate cold email + LinkedIn + direct mail to maximize touchpoints, increase brand familiarity, and dramatically improve reply rates.",
@@ -40,7 +47,7 @@ const services = [
     ],
   },
   {
-    icon: "🚀",
+    icon: "headset",
     title: "SDR as a Service",
     description:
       "Need a full-time outbound motion without the hiring headache? Our SDR-as-a-Service package gives you a dedicated appointment setter working exclusively on your account — fully managed, no benefits, no overhead.",
@@ -52,7 +59,7 @@ const services = [
     ],
   },
   {
-    icon: "📋",
+    icon: "clipboard",
     title: "SOPs & Process Documentation",
     description:
       "We turn how your business actually runs into clear, step-by-step standard operating procedures your team can follow — and new hires can learn from on day one. No more processes living only in someone's head.",
@@ -64,7 +71,7 @@ const services = [
     ],
   },
   {
-    icon: "⚙️",
+    icon: "settings",
     title: "Operations Consulting",
     description:
       "We find the bottlenecks, tighten your workflows, and put simple systems and tools in place so work runs consistently and is ready to scale — not just when you're watching.",
@@ -115,15 +122,16 @@ export default function Services() {
 
         <div className="pc-services-grid">
           {services.map((service, i) => (
-            <motion.div
+            <SpotlightCard
               key={service.title}
               className="pc-service-card"
+              glow="rgba(30,107,82,0.10)"
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.65, ease: EASE, delay: i * 0.10 }}
             >
-              <div className="pc-service-icon">{service.icon}</div>
+              <div className="pc-service-icon"><Icon name={service.icon} /></div>
               <h3 style={{ fontSize: 19, fontWeight: 700, color: "#18202B", marginBottom: 10, letterSpacing: "-0.01em" }}>
                 {service.title}
               </h3>
@@ -138,7 +146,7 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </SpotlightCard>
           ))}
         </div>
       </div>

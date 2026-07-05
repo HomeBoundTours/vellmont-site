@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Fraunces } from "next/font/google";
 import ConsultingHeader from "@/components/ConsultingHeader";
 import ConsultingFooter from "@/components/ConsultingFooter";
+import ScrollProgress from "@/components/ScrollProgress";
 import "./globals.css";
 
 const inter = Inter({
@@ -126,6 +127,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           >
             Skip to main content
           </a>
+          <ScrollProgress />
           <ConsultingHeader />
           <main id="main-content">{children}</main>
           <ConsultingFooter />

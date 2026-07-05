@@ -1,31 +1,32 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Icon, { type IconName } from "@/components/Icon";
 
-const steps = [
+const steps: { num: string; title: string; body: string; icon: IconName }[] = [
   {
     num: "01",
     title: "Discovery & ICP Build",
     body: "We start with a deep-dive call to understand your offer, ideal customer profile, deal size, and sales cycle. Then we build hyper-targeted prospect lists of your exact buyers — title, company size, industry, and tech stack.",
-    icon: "🎯",
+    icon: "search",
   },
   {
     num: "02",
     title: "Campaign Setup & Copywriting",
     body: "Our team writes high-converting email and LinkedIn sequences tailored to your ICP's pain points. We configure your sending infrastructure, warm your domains, and get everything launch-ready in under 2 weeks.",
-    icon: "✍️",
+    icon: "pen",
   },
   {
     num: "03",
     title: "Outreach & Follow-Up",
     body: "We launch multi-channel sequences across cold email and LinkedIn. Every reply gets a human response within hours. We handle all objections, nurture interested prospects, and qualify every lead before it reaches your calendar.",
-    icon: "📤",
+    icon: "send",
   },
   {
     num: "04",
     title: "Meetings Delivered & Optimized",
     body: "Qualified meetings land directly on your sales team's calendar with full context. Each week you receive a performance report. We continuously A/B test messaging and refine targeting to improve your cost-per-meeting.",
-    icon: "📅",
+    icon: "calendar-check",
   },
 ];
 
@@ -75,8 +76,8 @@ export default function HowItWorks() {
               viewport={{ once: true }}
               transition={{ duration: 0.65, ease: EASE, delay: i * 0.10 }}
             >
-              <div style={{ fontSize: 32, marginBottom: 18 }}>{step.icon}</div>
-              <div className="pc-step-num">
+              <div className="pc-step-head">
+                <span className="pc-step-icon"><Icon name={step.icon} size={22} /></span>
                 <span className="pc-step-num-circle">{step.num}</span>
               </div>
               <h3 style={{ fontSize: 17, fontWeight: 700, color: "#18202B", marginBottom: 10, lineHeight: 1.25 }}>

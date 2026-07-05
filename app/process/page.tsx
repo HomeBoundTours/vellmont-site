@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import HowItWorks from "@/components/sections/HowItWorks";
-import WhyPrestige from "@/components/sections/WhyPrestige";
+import PageHeader from "@/components/PageHeader";
+import ProcessTimeline from "@/components/process/ProcessTimeline";
+import WhyVellmont from "@/components/process/WhyVellmont";
+import CTABand from "@/components/CTABand";
 
 export const metadata: Metadata = {
   title: "Our Process",
@@ -11,8 +13,19 @@ export const metadata: Metadata = {
 export default function ProcessPage() {
   return (
     <>
-      <HowItWorks />
-      <WhyPrestige />
+      <PageHeader
+        eyebrow="The process"
+        title={
+          <>
+            From onboarding to<br />
+            <em className="pc-hero-accent">booked meetings</em> in 30 days.
+          </>
+        }
+        lead="Four steps take you from zero outbound activity to a predictable pipeline — without hiring, training, or managing an SDR team."
+      />
+      <ProcessTimeline />
+      <WhyVellmont />
+      <CTABand title="See it for yourself." />
     </>
   );
 }

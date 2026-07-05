@@ -44,68 +44,42 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="pc-section-light pc-section-pad" id="faq">
+    <section className="pc-section-pad" style={{ background: "#F7F5EF" }} id="faq">
       <div className="pc-container">
-        <motion.p
-          className="pc-eyebrow"
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: EASE }}
-        >
-          Common questions
-        </motion.p>
-        <motion.h2
-          className="pc-section-h2"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.65, ease: EASE, delay: 0.08 }}
-        >
-          Everything you need<br />
-          <em className="pc-hero-accent">to know.</em>
-        </motion.h2>
-
-        <div
-          style={{ display: "grid", gap: 40, gridTemplateColumns: "1fr" }}
-          className="md:grid-cols-[1fr_640px]"
-        >
-          <div />
-          <motion.div
-            className="pc-faq-list"
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
-            style={{ maxWidth: 720 }}
-          >
-            {faqs.map((faq, i) => (
-              <div key={i} className="pc-faq-item">
-                <button
-                  className="pc-faq-btn"
-                  aria-expanded={open === i}
-                  onClick={() => setOpen(open === i ? null : i)}
-                >
-                  {faq.q}
-                  <span className="pc-faq-icon" aria-hidden="true">+</span>
-                </button>
-                <AnimatePresence>
-                  {open === i && (
-                    <motion.div
-                      className="pc-faq-body"
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.28, ease: [0.4, 0, 0.2, 1] }}
-                      style={{ overflow: "hidden" }}
-                    >
-                      {faq.a}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            ))}
-          </motion.div>
+        <div className="pc-faq-list" style={{ maxWidth: 760, margin: "0 auto" }}>
+          {faqs.map((faq, i) => (
+            <motion.div
+              key={i}
+              className="pc-faq-item"
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.55, ease: EASE, delay: i * 0.05 }}
+            >
+              <button
+                className="pc-faq-btn"
+                aria-expanded={open === i}
+                onClick={() => setOpen(open === i ? null : i)}
+              >
+                {faq.q}
+                <span className="pc-faq-icon" aria-hidden="true">+</span>
+              </button>
+              <AnimatePresence>
+                {open === i && (
+                  <motion.div
+                    className="pc-faq-body"
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.28, ease: [0.4, 0, 0.2, 1] }}
+                    style={{ overflow: "hidden" }}
+                  >
+                    {faq.a}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

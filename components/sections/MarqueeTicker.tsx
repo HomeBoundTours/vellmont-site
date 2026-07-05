@@ -1,6 +1,6 @@
 const items = [
   "SaaS", "Professional Services", "Staffing & Recruiting", "Financial Services",
-  "Healthcare IT", "Manufacturing", "Logistics", "Commercial Real Estate",
+  "Healthcare IT", "Manufacturing", "Commercial Real Estate",
   "Insurance", "Marketing Agencies", "Legal Tech", "HR Tech",
 ];
 
