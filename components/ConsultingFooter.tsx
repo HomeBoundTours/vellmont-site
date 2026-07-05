@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import VellmontLogo from "@/components/VellmontLogo";
 
 export default function ConsultingFooter() {
   const year = new Date().getFullYear();
@@ -12,8 +13,7 @@ export default function ConsultingFooter() {
           {/* Brand col */}
           <div>
             <div className="pc-footer-logo">
-              <span className="pc-footer-logo-dot" aria-hidden="true" />
-              Vellmont Consulting LLC
+              <VellmontLogo variant="dark" size="lg" />
             </div>
             <p className="pc-footer-tagline" style={{ maxWidth: 320 }}>
               B2B appointment setting done right. We build your outbound system, run your outreach,

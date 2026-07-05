@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Magnetic from "@/components/Magnetic";
 import CountUp from "@/components/CountUp";
+import VellmontMark from "@/components/VellmontMark";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 const container = { hidden: {}, show: { transition: { staggerChildren: 0.12 } } };
@@ -44,7 +45,7 @@ export default function EditorialHero() {
               </textPath>
             </text>
           </svg>
-          <span className="pc-edh-badge-center">V</span>
+          <span className="pc-edh-badge-center"><VellmontMark size={34} /></span>
         </div>
 
         <motion.div variants={container} initial="hidden" animate="show">

@@ -1087,6 +1087,40 @@ button { cursor: pointer; }
   margin: 0; line-height: 1.15;
 }
 
+/* ── Brand lockup (seal + wordmark) ─────────────────────────────────── */
+.pc-seal-chip {
+  background: #FCFBF6;
+  border-radius: 26%;
+  display: inline-flex; align-items: center; justify-content: center;
+  box-shadow: inset 0 0 0 1px rgba(21,38,63,0.08);
+  flex-shrink: 0;
+}
+
+.pc-logo { display: inline-flex; align-items: center; gap: 11px; }
+.pc-logo-stack { display: flex; flex-direction: column; line-height: 1; }
+.pc-logo-word {
+  font-family: var(--font-serif);
+  font-size: 17px; font-weight: 600; letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+.pc-logo-rule { height: 1px; margin: 4px 0 3px; }
+.pc-logo-sub {
+  font-size: 7.5px; font-weight: 700;
+  letter-spacing: 0.40em; margin-right: -0.40em;
+  white-space: nowrap;
+}
+.pc-logo-lg .pc-logo-word { font-size: 20px; }
+.pc-logo-lg .pc-logo-sub { font-size: 8.5px; }
+.pc-logo-lg .pc-logo-rule { margin: 5px 0 4px; }
+
+.pc-logo-on-dark .pc-logo-word { color: #FCFBF7; }
+.pc-logo-on-dark .pc-logo-rule { background: rgba(95,178,147,0.85); }
+.pc-logo-on-dark .pc-logo-sub  { color: rgba(232,234,241,0.72); }
+
+.pc-logo-on-light .pc-logo-word { color: #15263F; }
+.pc-logo-on-light .pc-logo-rule { background: #1E6B52; }
+.pc-logo-on-light .pc-logo-sub  { color: #6B7488; }
+
 /* ── Footer ─────────────────────────────────────────────────────────── */
 .pc-footer {
   background: #0F1C30;
